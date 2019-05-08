@@ -17,6 +17,12 @@
   box-shadow: 10px 10px 5px grey;
 }
 
+.navbar-inverse .navbar-brand {
+  color: #32D2F0;
+  font-family: 'fira_sansbold', sans-serif;
+  font-size: 26px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -25,5 +31,4 @@ h1, h2, h3, h4, h5, h6 {
 body {
   background: image_url('scribble_light.png');
   font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
-
 }
