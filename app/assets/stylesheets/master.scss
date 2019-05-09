@@ -23,6 +23,15 @@
   font-size: 26px;
 }
 
+.pagination a {
+  border-radius: 5px;
+}
+
+.pagination a.active {
+  border-radius: 5px;
+}
+
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
