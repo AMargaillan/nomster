@@ -33,3 +33,13 @@ body {
   background: image_url('scribble_light.png');
   font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
 }
+
+.pagination {
+  font-size: 30px;
+  margin-left: 40%;
+}
+
+ul.pagination li {
+  margin-right: 10px;
+  margin-left: 10px;
+}
