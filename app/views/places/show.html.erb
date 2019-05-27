@@ -4,6 +4,7 @@
   <br /><br />
   <p><%= @place.description %></p>
 
+
   <style>
       html, body {
       height: 100%;
@@ -103,7 +104,7 @@
 </div>
 
 <div class="clear"></div>
-<%= simple_form_for @photo, url: '#' do |f| %>
-  <%= f.input :image, as: :file, label: "Photo" %>
+<%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+  <%= f.input :picture, as: :file, label: "Photo" %>
   <%= f.submit "Save Photo", class: 'btn btn-primary' %>
 <% end %>
