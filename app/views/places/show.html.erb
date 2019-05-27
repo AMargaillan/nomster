@@ -101,3 +101,9 @@
     </div>
   <% end %>
 </div>
+
+<div class="clear"></div>
+<%= simple_form_for @photo, url: '#' do |f| %>
+  <%= f.input :image, as: :file, label: "Photo" %>
+  <%= f.submit "Save Photo", class: 'btn btn-primary' %>
+<% end %>
