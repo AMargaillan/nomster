@@ -106,5 +106,6 @@
 <div class="clear"></div>
 <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
   <%= f.input :picture, as: :file, label: "Upload Picture" %>
+  <%= f.input :caption %>
   <%= f.submit "Save Photo", class: 'btn btn-primary' %>
 <% end %>
