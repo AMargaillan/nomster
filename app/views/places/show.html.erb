@@ -47,6 +47,35 @@
 
   <div class="float-right">
     <% if current_user && current_user == @place.user %>
+            <!-- Modal2 -->
+<div class="modal fade" id="photosModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">x</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Add A Picture</h4>
+      </div>
+      <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+        <div class="modal-body">
+          <%= f.input :picture, as: :file, label: "Upload Picture" %>
+          <%= f.input :caption %>
+        </div>
+        <div class="modal-footer">
+          <%= f.submit "Save Picture", class: 'btn btn-primary' %>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      <% end %>       
+    </div>
+  </div>
+</div>
+
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#photosModal">
+    Add A Picture
+  </button>
+</div>
       <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
       <%= link_to 'Delete', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this?'},class: 'btn btn-danger' %>
     <% end %>
@@ -103,40 +132,7 @@
   <% end %>
 </div>
 
-<!-- Modal2 -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">x</span>
-        </button>
-        <h4 class="modal-title" id="myModalLabel">Add A Picture</h4>
-      </div>
-      <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
-        <div class="modal-body">
-          <%= f.input :picture, as: :file, label: "Upload Picture" %>
-          <%= f.input :caption %>
-        </div>
-        <div class="modal-footer">
-          <%= f.submit "Save Picture", class: 'btn btn-primary' %>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      <% end %>       
-    </div>
-  </div>
-</div>
 
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-    Add A Picture
-  </button>
-</div>
 
-<%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
-  <%= f.input :picture, as: :file, label: "Upload Picture" %>
-  <%= f.input :caption %>
-  <%= f.submit "Save Photo", class: 'btn btn-primary' %>
-<% end %>
-  
+
 
