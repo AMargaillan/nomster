@@ -109,3 +109,10 @@
   <%= f.input :caption %>
   <%= f.submit "Save Photo", class: 'btn btn-primary' %>
 <% end %>
+
+<div>
+  <% @place.photos.each do |photo| %>
+    <%= image_tag photo.picture.url %>
+    <%= photo.caption %>
+  <% end %> 
+</div>
