@@ -21,8 +21,15 @@
         </blockquote>
       </div>
     <% end %>
-    </div>
-  <% end %>
+
+    <% @place.photos.each do |photo| %>
+      <% if photo.present? %>
+        <%= image_tag photo.picture.url %>
+        <%= photo.caption %>
+      <% end %>
+    <% end %> 
+  </div>
+<% end %>
 
 
 
