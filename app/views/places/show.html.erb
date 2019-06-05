@@ -120,6 +120,7 @@
 
 <div class="row">
   <% @place.comments.each do |comment| %>
+
     <div class="col-12 col-sm-6">
       <blockquote>
         <% if comment.humanized_rating.present? %>
@@ -133,6 +134,9 @@
 </div>
 
 <% @place.photos.each do |photo| %>
+
+  puts "YOUR IN THE PHOTS HTML ==============================================="
+  puts photo
   <%= image_tag photo.picture.url %>
   <%= photo.caption %>
 <% end %>
