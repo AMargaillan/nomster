@@ -131,12 +131,9 @@
       </blockquote>
     </div>
   <% end %>
-</div>
+</div
 
 <% @place.photos.each do |photo| %>
-
-  puts "YOUR IN THE PHOTS HTML ==============================================="
-  puts photo
   <%= image_tag photo.picture.url %>
   <%= photo.caption %>
 <% end %>
