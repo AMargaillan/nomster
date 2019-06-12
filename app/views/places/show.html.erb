@@ -72,6 +72,9 @@
 </div>
 
   <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    Add A Comment
+  </button>
   <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#photosModal">
     Add A Picture
   </button>
@@ -108,13 +111,7 @@
   </div>
 </div>
 
-<div class="col-10 offset-1">
-  <h1 class="float-left">Comments</h1>
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-    Add A Comment
-  </button>
-</div>
+
 
 <div class="clear"></div>
 
@@ -131,12 +128,18 @@
       </blockquote>
     </div>
   <% end %>
-</div
+</div>
 
-<% @place.photos.each do |photo| %>
-  <%= image_tag photo.picture.url %>
-  <%= photo.caption %>
-<% end %>
+<div class="col-12 offset-2">
+  <% @place.photos.each do |photo| %>
+  <div class="picture" style="float:left">
+    <%= image_tag photo.picture.url %>
+    <div class="captionhtml" >
+    <%= photo.caption %>
+  </div>
+  </div>
+  <% end %>
+</div> 
 
 
 
